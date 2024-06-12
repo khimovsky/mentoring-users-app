@@ -1,4 +1,3 @@
-import { UsersFilterComponent } from '../users-filter/users-filter.component';
 import { ChangeDetectionStrategy, Component, ViewEncapsulation, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsersListComponent } from '../users-list/users-list.component';

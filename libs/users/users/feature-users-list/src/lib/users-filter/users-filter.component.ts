@@ -22,8 +22,8 @@ export class UsersFilterComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.formcontrolName.valueChanges.pipe(
-      distinctUntilChanged(),
       debounceTime(500),
+      distinctUntilChanged(),
     ).subscribe(name => {
       this.usersFacade.setUsersFilter(name);
     });

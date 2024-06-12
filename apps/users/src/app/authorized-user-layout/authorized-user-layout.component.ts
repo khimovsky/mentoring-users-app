@@ -5,9 +5,8 @@ import { PushPipe } from '@ngrx/component';
 import { MatSidenavModule, MatSidenav } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import { Store } from '@ngrx/store';
 import { AuthFacade } from '@auth/data-access';
-import { Observable, map, take, tap, withLatestFrom } from 'rxjs';
+import { Observable, map, take, withLatestFrom } from 'rxjs';
 import { RouterModule } from '@angular/router';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
@@ -31,7 +30,6 @@ import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AuthorizedUserLayoutComponent {
-  private readonly store = inject(Store);
   private readonly facade = inject(AuthFacade);
   public readonly breakpointObserver = inject(BreakpointObserver);
 
